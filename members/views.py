@@ -14,5 +14,5 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                return HttpResponseRedirect('/main/')
-    return render_to_response('login.html', context_instance=RequestContext(request))
+                return HttpResponseRedirect('admin')
+    return render(request, 'login.html')
